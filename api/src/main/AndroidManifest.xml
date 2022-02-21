@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.dinesh.android.api">
+    <meta-data android:name="api_key" android:value="N8Nx0OwOvo1iuN2ZkFHZlyVKBVgoIcy4tUHMppO5"/>
+</manifest>

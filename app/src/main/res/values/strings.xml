@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Bonprix</string>
+    <string name="title_activity_bon_prix">BonPrixActivity</string>
+</resources>
