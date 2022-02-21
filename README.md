@@ -11,6 +11,8 @@ The end-node is a web-view that shows the data from the URL.
 - Code done completely using Jetpack compose ( no fragments or XML used)
 - Rest API called using Restrofit
 - Navigation using Compose navigation
+- The **MidCategoryUtiliyScreen** uses a string list of the selected category names and opens the inner category-list based on that. Since Jetpack compose does not allow any parcelable objects, a workaround using string splitting was used.
+- Kotlin tests are written for the viewmodel, usecases and repositories.
 
 |Home|MidCategoryUtiliyScreen|
 |---|---|
