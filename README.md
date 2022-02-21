@@ -15,3 +15,7 @@ The end-node is a web-view that shows the data from the URL.
 |Home|MidCategoryUtiliyScreen|
 |---|---|
 |![Screen](screen1.png)|![Screen](screen2.png)|
+
+|EndScreen|Webview|
+|---|---|
+|![Screen](endscreen.png)|![Screen](webview.png)|
