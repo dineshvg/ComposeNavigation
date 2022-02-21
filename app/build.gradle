@@ -1,0 +1,98 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+}
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdk 32
+
+    defaultConfig {
+        applicationId "com.dinesh.android.bonprix"
+        minSdk 21
+        targetSdk 32
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        vectorDrawables {
+            useSupportLibrary true
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    buildFeatures {
+        viewBinding true
+        compose true
+    }
+
+    testOptions {
+        unitTests.returnDefaultValues = true
+    }
+    composeOptions {
+        kotlinCompilerExtensionVersion compose_version
+    }
+    packagingOptions {
+        resources {
+            excludes += '/META-INF/{AL2.0,LGPL2.1}'
+        }
+    }
+}
+
+dependencies {
+
+    api project(":composeui")
+    api project(":domain")
+    api project(":data")
+
+    implementation imageLibs.coilCompose
+    implementation koinLibs.compose
+    implementation composeLibs.composeUI
+    implementation composeLibs.composeMaterial
+    implementation composeLibs.composeUiTooling
+    implementation composeLibs.lifecycleRuntime
+    implementation composeLibs.activityCompose
+
+    androidTestImplementation composeLibs.composeUITest
+    debugImplementation composeLibs.composeTooling
+
+    implementation kotlinLibs.core
+    implementation androidxLibs.appCompat
+    implementation androidxLibs.viewModel
+
+
+    implementation koinLibs.core
+    implementation koinLibs.android
+
+    implementation accompanist.systemUiController
+
+    implementation navigationLibs.navigationFragment
+    implementation navigationLibs.navigationCompose
+    implementation androidxLibs.material
+
+    implementation loggerLibs.timber
+
+    //unit-testing
+    testImplementation testLibs.jUnit5
+    testRuntimeOnly testLibs.jUnit5Engine
+    testImplementation testLibs.mockkAndroid
+    testImplementation testLibs.mockk
+    testImplementation testLibs.mockkJvm
+    testImplementation testLibs.coroutinesTest
+    testImplementation testLibs.androidArch
+    testImplementation testLibs.kotest
+    testImplementation testLibs.kotestAssertions
+    testImplementation testLibs.kotestProperties
+}

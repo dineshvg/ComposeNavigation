@@ -1,0 +1,9 @@
+apply from: "$rootProject.rootDir.absolutePath/androidLibraryConfig.gradle"
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    api retrofitLibs.retrofitCore
+    api moshiLibs.core
+    api moshiLibs.ktxCore
+}

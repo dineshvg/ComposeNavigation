@@ -1,0 +1,26 @@
+apply from: "$rootProject.rootDir.absolutePath/androidLibraryConfig.gradle"
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    api project('::data')
+
+    api okHttpLibs.okHttpInterceptor
+    api okHttpLibs.okHttp
+    api retrofitLibs.retrofitCore
+    api retrofitLibs.retrofitMoshi
+    api retrofitLibs.retrofitMock
+
+    api moshiLibs.core
+    api moshiLibs.ktxCore
+
+    testImplementation testLibs.jUnit5
+    testRuntimeOnly testLibs.jUnit5Engine
+    testImplementation testLibs.mockkAndroid
+    testImplementation testLibs.mockk
+    testImplementation testLibs.mockkJvm
+    testImplementation testLibs.coroutinesTest
+    testImplementation testLibs.androidArch
+    testImplementation testLibs.kotest
+    testImplementation testLibs.kotestAssertions
+    testImplementation testLibs.kotestProperties
+}

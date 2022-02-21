@@ -1,0 +1,17 @@
+apply from: "$rootProject.rootDir.absolutePath/androidLibraryConfig.gradle"
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation imageLibs.coilCompose
+    implementation koinLibs.compose
+    implementation composeLibs.composeUI
+    implementation composeLibs.composeMaterial
+    implementation composeLibs.composeUiTooling
+    implementation composeLibs.lifecycleRuntime
+    implementation composeLibs.activityCompose
+    implementation androidxLibs.material
+
+    androidTestImplementation composeLibs.composeUITest
+    debugImplementation composeLibs.composeTooling
+}
